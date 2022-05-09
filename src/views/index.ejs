@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="main">
+        <section class="monitoring__form">
+            <%- include('partials/computerForm', { commandsSSH,commandsSNMP })%>
+            
+            <div class="history">
+                <div class="history-header">
+                    <span>Monitorizacion de maquinas</span>
+                </div>
+                <div class="history-body">
+                    <div>
+                        <span>192.168.1.11</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="monitoring__body">
+            <div class="monitoring__body-computer">
+                <!-- AQUI VAN TODAS LAS BUSQUEDAS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/UI.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

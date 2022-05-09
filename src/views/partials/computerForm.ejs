@@ -1,0 +1,36 @@
+<form id="monitoring" class="monitoring">
+    <div class="box">
+        <label for="ip">IP</label>
+        <input type="text" name="ip" id="ip">
+    </div>
+
+    <div class="box" id="community">
+        <label for="community">Comunidad</label>
+        <input type="text" name="community" id="community">
+    </div>
+
+    <div class="box">
+        <label for="ssh" >SSH</label>
+        <input type="radio" name="action" id="ssh">
+
+        <label for="snmp">SNMP</label>
+        <input type="radio" name="action" id="snmp">
+    </div>
+
+    <div class="box" id="optionsSSH">
+        <select name="optionsSSH" multiple >
+            <% commandsSSH.forEach(command => { %>
+                <option value= <%= command.value %>  ><%= command.name %></option>
+            <%})%>
+        </select>
+    </div>
+    <div class="box" id="optionsSNMP">
+        <select name="optionsSNMP" multiple>
+            <% commandsSNMP.forEach(command => {%>
+                <option value= <%= command.value %>  ><%= command.name %></option>
+            <%})%>
+        </select>
+    </div>
+
+    <button type="submit">Monitorizar</button>
+</form>
